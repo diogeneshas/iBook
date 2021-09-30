@@ -3,12 +3,12 @@ export default {
   head: {
     title: 'iBook',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'pt-BR'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Uma nova maneira de ler livros online!' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -32,12 +32,20 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
+    '@nuxt/typescript-build', '@nuxtjs/style-resources'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/style-resources'
   ],
+
+  styleResources: {
+    // your settings here
+    sass: ['@/components/bosons/*.scss'],
+    scss: ['@/components/bosons/*.scss'],
+    hoistUseStatements: true  // Hoists the "@use" imports. Applies only to "sass", "scss" and "less". Default: false.
+   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
