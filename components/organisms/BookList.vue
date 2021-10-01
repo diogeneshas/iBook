@@ -1,15 +1,17 @@
 <template>
-   <AboutTemplate />
+    <div>
+        <h2>Listagem de Livros</h2>
+    </div>
 </template>
 
 <script lang="ts">
     import Vue from 'vue'
 
     export default Vue.extend({
-        layout: 'ibook'
+        
     })
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 
 </style>
