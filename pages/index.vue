@@ -12,15 +12,8 @@
 
   export default Vue.extend({
     layout: 'ibook',
-    computed: {
-      $count() {
-        return books.$count
-      }
-    },
-    methods: {
-      increment() {
-        books.increment()
-      }
+    asyncData() {
+      console.log(books.books[0].title)
     }
   })
 </script>
