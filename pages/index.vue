@@ -1,8 +1,6 @@
 <template>
   <div class="box">
-    <!-- <HomeTemplate /> -->
-    <h1>{{ $count }}</h1>
-    <button @click="increment">incrementar</button>
+    <HomeTemplate />
   </div>
 </template>
 
@@ -12,8 +10,8 @@
 
   export default Vue.extend({
     layout: 'ibook',
-    asyncData() {
-      console.log(books.books[0].title)
+    async asyncData() {
+      await books.index()
     }
   })
 </script>
